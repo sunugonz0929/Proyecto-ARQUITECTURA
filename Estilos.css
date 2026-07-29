@@ -756,3 +756,20 @@ img {
     background-color: #dcecdf;
     border: 1px solid #a8cbae;
 }
+
+@media (max-width: 750px) {
+
+    .contacto-contenido,
+    .fila-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .informacion-contacto {
+        position: static;
+    }
+
+    .formulario-contacto {
+        padding: 30px 22px;
+    }
+
+}
