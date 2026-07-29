@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto</title>
+
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <a href="index.html" class="logo">
+            DISEÑO<span>ARQUITECTÓNICO</span>
+        </a>
+
+        <nav class="navegacion">
+            <a href="index.html">Inicio</a>
+            <a href="Objetivo.html">Objetivo</a>
+            <a href="Menú.html">Servicios</a>
+            <a href="Diseño.html">Diseño</a>
+            <a href="Construcción.html">Construcción</a>
+            <a href="Interiorismo.html">Interiorismo</a>
+            <a href="Sostenibilidad.html">Sostenibilidad</a>
+            <a href="Formulario.html" class="activo">Contacto</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="portada portada-interna contacto">
+            <div class="portada-contenido">
+
+                <p class="subtitulo">Hablemos de tu proyecto</p>
+
+                <h1>Contacto</h1>
+
+                <p>
+                    Cuéntanos qué espacio deseas diseñar, construir o renovar.
+                    Nuestro equipo estará encantado de atenderte.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="seccion">
+
+            <div class="contenedor contacto-contenido">
+
+                <div class="informacion-contacto">
+
+                    <p class="etiqueta">Información</p>
+
+                    <h2>Construyamos algo extraordinario</h2>
+
+                    <p>
+                        Completa el formulario con la información de tu proyecto.
+                        Nos comunicaremos contigo para conocer tus ideas y
+                        ofrecerte una propuesta personalizada.
+                    </p>
+
+                    <div class="dato-contacto">
+                        <span>01</span>
+
+                        <div>
+                            <h3>Ubicación</h3>
+                            <p>San Pedro La Laguna, Sololá, Zona 1 - Cantón Pacuchá</p>
+                        </div>
+                    </div>
+
+                    <div class="dato-contacto">
+                        <span>02</span>
+
+                        <div>
+                            <h3>Correo electrónico</h3>
+                            <p>sunugonz0929@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="dato-contacto">
+                        <span>03</span>
+
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+502 5558-2325</p>
+                        </div>
+                    </div>
+
+                    <div class="dato-contacto">
+                        <span>04</span>
+
+                        <div>
+                            <h3>Horarios de Atención</h3>
+                            <p>Lunes a viernes, de 8:00 a 20:00 Horas</p>
+                            <p>Sábado, de 8:00 a 17:00 Horas</p>
+                            <p>Domingo, de 8:00 a 13:00 Horas</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <form class="formulario-contacto" id="formularioContacto">
+
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre completo</label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Escriba su nombre"
+                            required
+                        >
+                    </div>
+
+                    <div class="fila-formulario">
+
+                        <div class="grupo-formulario">
+                            <label for="correo">Correo electrónico</label>
+
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="sunugonz0929@gmail.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="telefono">Número de teléfono</label>
+
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="+502 5558-2325"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="servicio">Servicio de interés</label>
+
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="diseno">Diseño arquitectónico</option>
+                            <option value="construccion">Construcción</option>
+                            <option value="interiorismo">Interiorismo</option>
+                            <option value="sostenibilidad">Sostenibilidad</option>
+                            <option value="remodelacion">Remodelación</option>
+                            <option value="otro">Otro servicio</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="tipoProyecto">Tipo de proyecto</label>
+
+                        <select id="tipoProyecto" name="tipoProyecto" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="vivienda">Vivienda</option>
+                            <option value="apartamento">Apartamento</option>
+                            <option value="oficina">Oficina</option>
+                            <option value="comercio">Local comercial</option>
+                            <option value="edificio">Edificio</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="mensaje">Descripción del proyecto</label>
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="6"
+                            placeholder="Cuéntenos brevemente qué desea realizar..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="aceptar-condiciones">
+
+                        <input
+                            type="checkbox"
+                            id="terminos"
+                            name="terminos"
+                            required
+                        >
+
+                        <label for="terminos">
+                            Acepto que mis datos sean utilizados para responder
+                            esta solicitud.
+                        </label>
+
+                    </div>
+
+                    <button type="submit" class="boton-formulario">
+                        Enviar solicitud
+                    </button>
+
+                    <p id="mensajeFormulario" class="mensaje-formulario"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+
+        <div class="contenedor pie-contenido">
+
+            <div>
+                <h3>Proyecto</h3>
+                <p>Estudio de arquitectura, Alex S. G.</p>
+            </div>
+
+            <img src="Imágenes/logo.png" alt="logo">
+
+            <div>
+                <p>San Pedro La Laguna, Sololá</p>
+                <p>sunugonz0929@gmail.com</p>
+            </div>
+
+        </div>
+
+        <p class="derechos">
+            "DISEÑANDO EL PRESENTE, CONSTRUYENDO EL FUTURO"
+        </p>
+
+    </footer>
+
+</body>
+</html>
