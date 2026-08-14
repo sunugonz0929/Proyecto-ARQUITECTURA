@@ -9,7 +9,7 @@
 
             mensajeFormulario.textContent =
                 "Gracias, " + nombre +
-                ". Su solicitud fue registrada correctamente.";
+                ". La solicitud fue registrada correctamente. Tomaremos en cuenta...";
 
             mensajeFormulario.classList.add("mensaje-exito");
 
