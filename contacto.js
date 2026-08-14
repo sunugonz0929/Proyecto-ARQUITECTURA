@@ -115,3 +115,110 @@ formulario.addEventListener("submit", async function (event) {
     }
 
 });
+
+const express = require("express");
+const nodemailer = require("nodemailer");
+const cors = require("cors");
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+
+app.post("/enviar", async (req, res) => {
+
+    const {
+        nombre,
+        correo,
+        telefono,
+        servicio,
+        tipoProyecto,
+        mensaje
+    } = req.body;
+
+
+    try {
+
+        const transportador = nodemailer.createTransport({
+
+            service: "gmail",
+
+            auth: {
+
+                user: "sunugonz0929@gmail.com",
+
+                password: process.env.GMAIL_APP_PASSWORD
+
+            }
+
+        });
+
+
+        const contenidoCorreo = {
+
+            from: "sunugonz0929@gmail.com",
+
+            to: "sunugonz0929@gmail.com",
+
+            replyTo: correo,
+
+            subject: "Nueva solicitud - " + nombre,
+
+            text: `
+NUEVA SOLICITUD DE CONTACTO
+
+Nombre:
+${nombre}
+
+Correo:
+${correo}
+
+Teléfono:
+${telefono}
+
+Servicio:
+${servicio}
+
+Tipo de proyecto:
+${tipoProyecto}
+
+Descripción del proyecto:
+${mensaje}
+            `
+
+        };
+
+
+        await transportador.sendMail(contenidoCorreo);
+
+
+        res.status(200).json({
+
+            mensaje: "Correo enviado correctamente"
+
+        });
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        res.status(500).json({
+
+            mensaje: "Error al enviar el correo"
+
+        });
+
+    }
+
+});
+
+
+app.listen(3000, () => {
+
+    console.log(
+        "Servidor funcionando en http://localhost:3000"
+    );
+
+});
